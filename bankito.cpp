@@ -4,11 +4,16 @@ int main () {
     string respuesta;
     int edad;
     char nombres [50];
+    char nombresPadresApoderado [50];
     string padresApoderado;
     char nacionalidad [20];
+    char nacionalidadPadre [20];
     char direccion [20];
-    char DNI [8];
+    char direccionPadre [20];
+    int DNI;
+    int DNIpadre;
     int depoito;
+    int clave;
 
     cout << "***********************************************************" << endl;
     cout << "**** CREA TU CUENTA BANCARIA EN NUESTRA FILIAL BANKITO ****" << endl;
@@ -31,8 +36,7 @@ int main () {
                 cin >> direccion;
                 cout << "INGRESA TU DNI: ";
                 cin >> DNI;
-                cout << "cuanto vas a depositar: ";
-                cin >> depoito;
+                
             }
 
             else if (edad <= 17)
@@ -47,17 +51,18 @@ int main () {
                             if (edad >= 18)
                             {
                                 cout << "INGRESA LOS NOMBRE COMPLETOS DE TU APODERADO: ";
-                                cin.getline (nombres,50,'\n');
+                                cin >> nombresPadresApoderado;
                                 cout << "INGRESA SU NACIONALIDAD: ";
-                                cin.getline (nacionalidad,'\n');
+                                cin >> nacionalidadPadre;
                                 cout << "INGRESA SU DIRECCIÓN: "; 
-                                cin >> direccion;
+                                cin >> direccionPadre;
                                 cout << "INGRESA SU DNI: ";
-                                cin >> DNI;
+                                cin >> DNIpadre;
                             }
                             else {
                                 cout << "TU APODERADO NO ES MAYOR DE EDAD" << endl;
                             }
+
                         cout << "AHORA INGRESA TUS DATOS." << endl;
                         cout << "INGRESA TUS NOMBRES COMPLETOS: ";
                         cin >> nombres;
@@ -67,23 +72,42 @@ int main () {
                         cin >> direccion;
                         cout << "INGRESA TU DNI: ";
                         cin >> DNI;
+                        
+                        cout << "El nombre de tu apoderado es: " << nombresPadresApoderado << ", su DNI es: " << DNIpadre << ", su nacionalidad es: " << nacionalidadPadre << " su direción es: " << direccionPadre << endl;
+
+                        cout << "Tu nombre es: " << nombres << ", tu DNI es: " << DNI << ", tu nacionalidad es: " << nacionalidad << ", ingresa tu dirección: " << direccion << endl;
                     }
+
+                    
+
 
                     else
                     {
-                        cout << "PARA PODER ABRIR UNA CUENTA DE AH7ORROS EN BANKITO DEBES DE TRAER A UNO DE TUS PADRES O A UN APODERADO MAYOR DE EDAD" << endl;
+
+                        cout << endl << "PARA PODER ABRIR UNA CUENTA DE AHORROS EN BANKITO DEBES DE" << endl;
+                        cout << "TRAER A UNO DE TUS PADRES O A UN APODERADO MAYOR DE EDAD" << endl;
                     }
+
+
             }
 
             else {
                 
             }
-                    cout << "xxxxxxx";
+                cout << "****************   DATOS   ***************" << endl;
+                cout << "** 1. NOMBRES: " << nombres;
+                cout << "** 2. DNI: " << DNI;            
+                cout << "** 3. NACIONALIDAD: : " << nacionalidad;
+                cout << "** 4. DIRECCIÓN : " << direccion;
+                cout << "******************************************" << endl;
+
 
         }
         else {
             cout << "LO ESPERAMOS EN OTRO MOMENTO, GRACIAS POR VISITAR NUESTRO BANCO.";
         }
+
+        cout << "CUANTO VAS A DEPOSTAR";
         
 
     return 0;
